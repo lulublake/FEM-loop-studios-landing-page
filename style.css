@@ -84,17 +84,25 @@ body {
     flex-direction: column;
     align-items: center;
 }
+#creations-head {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80vw;
+}
+#creations-head button {
+    display: none;
+}
 #creations h1 {
-    font-size:  2.0rem;
+    font-size:  2.8rem;
     font-family: sans-serif;
     font-weight: 300;
-    margin: 2rem 0 1rem;
+    margin-bottom: 0;
 }
 #creations button {
     width: 50vw;
     max-width: 200px;
     height: 3rem;
-    margin: 0.5rem 0 5rem;
     background-color: white;
     border: solid 3px rgba(0, 0, 0, 0.349);
     border-radius: 0;
@@ -102,9 +110,9 @@ body {
     letter-spacing: .2rem;
 }
 #creations .items > div {
-    width: 90vw;
+    width: 80vw;
     background-size: cover;
-    margin: 1.8rem 0;
+    margin: 3rem 0;
     font-family: sans-serif;
 }
 #creations .items div.cover {
@@ -112,7 +120,7 @@ body {
     font-size: 20px;
     color: white;
     background-color: rgba(0, 0, 0, 0.322);
-    padding: 2.5rem 10rem 2rem 1.5rem;
+    padding: 3rem 10rem 2rem 1.5rem;
 }
 #creations .items > div:nth-child(1){
     background-image: url(images/mobile/image-deep-earth.jpg);
@@ -149,6 +157,7 @@ footer {
     flex-direction: column;
     align-items: center;
     padding: 4rem 0;
+    margin: 4rem 0 0;
 }
 #footer-left > img {
     margin-bottom: 2rem;
@@ -166,7 +175,6 @@ footer ul {
     flex-direction: column;
     justify-content: space-between;
     height: 200px;
-    margin: 0 0 2rem;
 }
 footer a {
     color: white;
@@ -198,6 +206,82 @@ footer p {
     height: max-content;
     }
     
+    #creations .items {
+        width: 80vw;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-gap: 2vw;        
+    }
+    #creations .items > div {
+        max-width: 18vw;
+        height: 35vw;
+        margin: 0;
+        background-size: cover;
+        margin: 3rem 0;
+        font-family: sans-serif;
+    }
+    #creations .items div.cover {
+        border: solid 1px wheat;
+        font-size: calc(1rem + 1vw);
+        color: white;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.322);
+        padding: 27vw 0 2rem 2.5rem;
+    }
+    #creations-head {
+        justify-content: space-between;
+        align-items: center;
+        width: 80vw;
+        margin-bottom: 2rem;
+    }
+    #creations-head h1 {
+        font-size: 3rem;
+    }
+    #creations-head button {
+        display: inline-block;
+    }
+    #creations > button {
+        display: none;
+    }
+    #creations .items > div:nth-child(1){
+        background-image: url(images/desktop/image-deep-earth.jpg);
+    }
+    #creations .items > div:nth-child(2){
+        background-image: url(images/desktop/image-night-arcade.jpg);
+    }
+    #creations .items > div:nth-child(3){
+        background-image: url(images/desktop/image-soccer-team.jpg);
+    }
+    #creations .items > div:nth-child(4){
+        background-image: url(images/desktop/image-grid.jpg);
+    }
+    #creations .items > div:nth-child(5){
+        background-image: url(images/desktop/image-from-above.jpg);
+    }
+    #creations .items > div:nth-child(6){
+        background-image: url(images/desktop/image-pocket-borealis.jpg);
+    }
+    #creations .items > div:nth-child(7){
+        background-image: url(images/desktop/image-curiosity.jpg);
+    }
+    #creations .items > div:nth-child(8){
+        background-image: url(images/desktop/image-fisheye.jpg);
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     footer {
         display: flex;
         flex-direction: row;
