@@ -12,63 +12,66 @@ body {
 }
 
 /******** NAVBAR SECTION *******/
-.navbar {
-    padding: 0 0 4.5rem;
-}
-  
-.navbar-brand {
-    font-size: 2.5rem;
-    font-weight: bold;
-}
   
 .nav-item {
-    padding: 0 18px;
+    padding: 0 30px 0 0;
 }
   
 .nav-link {
-    font-size: 1.2rem;
+    font-size: 100%;
+    font-family: 'Alata';
+    color: white;
 }
   
 /******** TITLE SECTION *******/
+.container-fluid{
+    width: 100vw;
+    padding: 50px 50px 300px;
+}
 .title{
     background-image: url(images/mobile/image-hero.jpg);
     height: max-content;
     width: 100vw;
-    padding: 50px 50px 300px;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 .title-heading{
     color: white;
-    width: 450px;
-    font-size: 4rem;
-    font-weight: lighter;
+    width: 78vw;
     border: 3px solid;
     margin-top: 150px;
-    padding: 20px 50px 20px 30px;
+    
+}
+.nav-heading{
+    font-size: 300%;
+    margin: 30px 40px 30px 25px;
+    font-weight: lighter;
+    font-family: 'Josefin Sans';
 }
 
 
 /******** LEADERS SECTION *******/
 .leader{
     text-align: center;
-    padding: 100px 15px;
+    padding: 100px 0 80px;
     max-width: 85%;
     margin: auto;
 }
 
 .top-img{
     max-width: 100%;
-    margin-bottom: 50px;
+    margin-bottom: 60px;
 }
 
 .lead-heading{
     font-weight: lighter;
-    font-size: 3rem;
+    font-size: 2.5rem;
+    line-height: 1;
 }
 .lead-paragraph{
-    width: 60%;
+    width: 70%;
+    font-family: 'Alata';
     color: hsl(0, 0%, 41%);
     margin: auto;
     line-height: 2;
@@ -94,9 +97,9 @@ body {
     display: none;
 }
 #creations h1 {
-    font-size:  2rem;
+    font-size:  2.5rem;
     font-family: sans-serif;
-    font-weight: 300;
+    font-weight: lighter;
     margin-bottom: 0;
 }
 #creations button {
@@ -109,28 +112,18 @@ body {
     font-size: 1.2rem;
     letter-spacing: .2rem;
 }
-#creations button:hover {
-    animation: button .1s linear;
-    animation-fill-mode: forwards;
-}
 #creations .items > div {
     width: 80vw;
     background-size: cover;
-    background-position: center;
     margin: 3rem 0;
     font-family: sans-serif;
 }
 #creations .items div.cover {
     border: solid 1px wheat;
     font-size: 20px;
-    letter-spacing: 2px;
     color: white;
     background-color: rgba(0, 0, 0, 0.322);
     padding: 3rem 10rem 2rem 1.5rem;
-}
-#creations .items div.cover:hover {
-    animation: cover .2s ease-in-out;
-    animation-fill-mode: forwards ;
 }
 #creations .items > div:nth-child(1){
     background-image: url(images/mobile/image-deep-earth.jpg);
@@ -184,36 +177,22 @@ footer ul {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: min-content;
+    height: 200px;
     padding-left: 0;
 }
-footer li {
-    height: min-content;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
 footer a {
-    width: max-content;
-    margin-top: 1rem;
     color: white;
     text-decoration: none;
     font-family: 'Alata', sans-serif;
-}
-footer hr {
-    width: 2.5rem;
-    margin: 15px;
-    border:solid 2px white;
-    opacity: .8;
 }
 #footer-icons {
     display: flex;
     justify-content: space-between;
     width: 180px;
-    margin: 2rem;
+    margin: 2rem 0 ;
 }
 #footer-icons .icons {
-    height: 24px;
+    height: 20px;
 }
 footer p {
     color: rgb(138, 133, 133);
@@ -222,13 +201,72 @@ footer p {
 
 
 
+
+
 @media (min-width: 1000px){
     
+    .container-fluid{
+        width: 100vw;
+        padding: 50px 150px 100px;
+    }
+
     .title{
     background-image: url(images/desktop/image-hero.jpg);
     height: max-content;
     }
     
+    .title-heading{
+        color: white;
+        width: 30vw;
+        border: 3px solid;
+        margin-top: 150px;
+        
+    }
+    .nav-heading{
+        font-size: 300%;
+        margin: 20px 0px 20px 25px;
+        font-weight: lighter;
+        font-family: 'Josefin Sans';
+    }
+    
+    .leader{
+        text-align: left;
+        padding: 100px 0 80px;
+        max-width: 85%;
+        margin: auto;
+    }
+
+    .top-img{
+        max-width: 100%;
+        margin-bottom: 100px;
+        position: relative;
+        right: 250px;
+    }
+    
+    .leader-text{
+        position: absolute;
+        background-color: white;
+        left: 690px;
+        top: 840px;
+        padding: 50px 80px 0;
+    }
+
+    .lead-heading{
+        font-weight: lighter;
+        font-size: 3rem;
+        line-height: 1;
+        width: 60%;
+    }
+    .lead-paragraph{
+        width: 65%;
+        font-family: 'Alata';
+        color: hsl(0, 0%, 41%);
+        line-height: 1.8;
+        font-weight: 500;
+        padding: 10px 0 0;
+        margin: 0;
+    }
+
     #creations .items {
         width: 80vw;
         display: grid;
@@ -246,11 +284,11 @@ footer p {
     }
     #creations .items div.cover {
         border: solid 1px wheat;
-        font-size: calc(1rem + .7vw);
+        font-size: calc(1rem + 1vw);
         color: white;
         height: 100%;
         background-color: rgba(0, 0, 0, 0.322);
-        padding: 25vw 0 2rem 2rem ;
+        padding: 27vw 0 2rem 2.5rem;
     }
     #creations-head {
         justify-content: space-between;
@@ -292,19 +330,6 @@ footer p {
         background-image: url(images/desktop/image-fisheye.jpg);
     }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
     footer {
         display: flex;
         flex-direction: row;
@@ -322,12 +347,10 @@ footer p {
     #footer-icons {
         display: flex;
         justify-content: space-between;
-        width: 180px;
-        margin: 0 0 2rem 0;
+        width: 160px;
+        margin-bottom: 0.85rem;
     }
-    #footer-icons {
-        width: 250px;
-    }
+
     #footer-right{
         display: flex;
         flex-direction: column;
@@ -335,37 +358,5 @@ footer p {
     }
     footer p {
         margin-top: 10px;
-    }
-}
-
-
-
-
-
-
-
-
-
-
-
-/* ******* Animations ********* */
-@keyframes cover {
-    from {
-        background-color: rgba(0, 0, 0, 0.322);
-        color: white;
-    }   
-    to {
-        background-color: rgba(255, 255, 255, 0.658);
-        color: black;
-    }
-}
-@keyframes button {
-    from {
-        background-color: white;
-        color: black;
-    }
-    to {
-        background-color: black;
-        color: white;
     }
 }
