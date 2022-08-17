@@ -94,7 +94,7 @@ body {
     display: none;
 }
 #creations h1 {
-    font-size:  2rem;
+    font-size:  1.8rem;
     font-family: sans-serif;
     font-weight: 300;
     margin-bottom: 0;
@@ -197,20 +197,24 @@ footer a {
     width: max-content;
     margin-top: 1rem;
     color: white;
+    border-bottom: solid 3px transparent;
+    padding-bottom: .5rem;
     text-decoration: none;
     font-family: 'Alata', sans-serif;
 }
-footer hr {
-    width: 2.5rem;
-    margin: 15px;
-    border:solid 2px white;
-    opacity: .8;
+footer a:hover {
+    color: white;
 }
 #footer-icons {
     display: flex;
     justify-content: space-between;
-    width: 180px;
+    width: min-content;
     margin: 2rem;
+}
+#footer-icons div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 #footer-icons .icons {
     height: 24px;
@@ -259,7 +263,7 @@ footer p {
         margin-bottom: 2rem;
     }
     #creations-head h1 {
-        font-size: 3rem;
+        font-size: 2.5rem;
     }
     #creations-head button {
         display: inline-block;
@@ -319,15 +323,14 @@ footer p {
         width: 380px;
         margin: 0;
     }
+    
     #footer-icons {
         display: flex;
         justify-content: space-between;
-        width: 180px;
         margin: 0 0 2rem 0;
-    }
-    #footer-icons {
         width: 250px;
     }
+    
     #footer-right{
         display: flex;
         flex-direction: column;
