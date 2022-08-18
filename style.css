@@ -11,6 +11,7 @@ body {
     font-size: 15px;
 }
 
+
 /******** NAVBAR SECTION *******/
 .nav-item {
     padding: 0 30px 0 0;
@@ -21,6 +22,8 @@ body {
     font-family: 'Alata';
     color: white;
 }
+
+
 /******** TITLE SECTION *******/
 .container-fluid{
     width: 100vw;
@@ -79,7 +82,6 @@ body {
 
 
 /******** CREATION SECTION *******/
-
 #creations {
     display: flex;
     flex-direction: column;
@@ -110,9 +112,14 @@ body {
     font-size: 1.2rem;
     letter-spacing: .2rem;
 }
+#creations button:hover {
+    animation: button .1s linear;
+    animation-fill-mode: forwards;
+}
 #creations .items > div {
     width: 80vw;
     background-size: cover;
+    background-position: center;
     margin: 3rem 0;
     font-family: sans-serif;
 }
@@ -120,8 +127,13 @@ body {
     border: solid 1px wheat;
     font-size: 20px;
     color: white;
+    letter-spacing: 2px;
     background-color: rgba(0, 0, 0, 0.322);
     padding: 3rem 10rem 2rem 1.5rem;
+}
+#creations .items div.cover:hover {
+    animation: cover .2s ease-in-out;
+    animation-fill-mode: forwards ;
 }
 #creations .items > div:nth-child(1){
     background-image: url(images/mobile/image-deep-earth.jpg);
@@ -175,10 +187,18 @@ footer ul {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 200px;
+    height: min-content;
     padding-left: 0;
 }
+footer li {
+    height: min-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 footer a {
+    width: max-content;
+    margin-top: 1rem;
     color: white;
     border-bottom: solid 3px transparent;
     padding-bottom: .5rem;
@@ -205,19 +225,11 @@ footer a:hover {
 footer p {
     color: rgb(138, 133, 133);
 }
-
-
-
-
-
-
 @media (min-width: 1000px){
-    
     .container-fluid{
         width: 100vw;
         padding: 50px 150px 100px;
     }
-
     .title{
     background-image: url(images/desktop/image-hero.jpg);
     height: max-content;
@@ -236,21 +248,18 @@ footer p {
         font-weight: lighter;
         font-family: 'Josefin Sans';
     }
-    
     .leader{
         text-align: left;
         padding: 100px 0 80px;
         max-width: 85%;
         margin: auto;
     }
-
     .top-img{
         max-width: 100%;
         margin-bottom: 100px;
         position: relative;
         right: 250px;
     }
-    
     .leader-text{
         position: absolute;
         background-color: white;
@@ -258,7 +267,6 @@ footer p {
         top: 840px;
         padding: 50px 80px 0;
     }
-
     .lead-heading{
         font-weight: lighter;
         font-size: 3rem;
@@ -274,7 +282,6 @@ footer p {
         padding: 10px 0 0;
         margin: 0;
     }
-
     #creations .items {
         width: 80vw;
         display: grid;
@@ -292,11 +299,11 @@ footer p {
     }
     #creations .items div.cover {
         border: solid 1px wheat;
-        font-size: calc(1rem + 1vw);
+        font-size: calc(1rem + .7vw);
         color: white;
         height: 100%;
         background-color: rgba(0, 0, 0, 0.322);
-        padding: 27vw 0 2rem 2.5rem;
+        padding: 25vw 0 2rem 2rem ;
     }
     #creations-head {
         justify-content: space-between;
@@ -337,7 +344,6 @@ footer p {
     #creations .items > div:nth-child(8){
         background-image: url(images/desktop/image-fisheye.jpg);
     }
-
     footer {
         display: flex;
         flex-direction: row;
@@ -352,7 +358,6 @@ footer p {
         width: 380px;
         margin: 0;
     }
-    
     #footer-icons {
         display: flex;
         justify-content: space-between;
@@ -366,5 +371,28 @@ footer p {
     }
     footer p {
         margin-top: 10px;
+    }
+}
+
+
+/* ******* Animations ********* */
+@keyframes cover {
+    from {
+        background-color: rgba(0, 0, 0, 0.322);
+        color: white;
+    }   
+    to {
+        background-color: rgba(255, 255, 255, 0.658);
+        color: black;
+    }
+}
+@keyframes button {
+    from {
+        background-color: white;
+        color: black;
+    }
+    to {
+        background-color: black;
+        color: white;
     }
 }
