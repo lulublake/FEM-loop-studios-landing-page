@@ -1,3 +1,16 @@
+/* **********VARIABLES********** */
+:root {
+    --lighter-font: 'Josefin sans', sans-serif;
+    --bolder-font: 'Alata', sans-serif;
+    --white: hsl(0, 0%, 100%);
+    --black: hsl(0, 0%, 0%);
+    --dark-grey: hsl(0, 0%, 55%);
+    --very-dark-grey: hsl(0, 0%, 41%);
+    --default-font-size: var(--default-font-size);
+}
+
+
+
 * {
     margin: 0;
     padding: 0;
@@ -8,80 +21,107 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    font-size: 15px;
+    font-size: var(--default-font-size);
+    font-family: var(--bolder-font);
 }
 
 
-/******** NAVBAR SECTION *******/
-.nav-item {
-    padding: 0 30px 0 0;
-}
-  
-.nav-link {
-    font-size: 100%;
-    font-family: 'Alata';
-    color: white;
-}
-
-
-/******** TITLE SECTION *******/
-.container-fluid{
+/* ********* HEADER SECTION ********* */
+header {
+    min-height: 100vh;
     width: 100vw;
-    padding: 50px 50px 300px;
-}
-.title{
     background-image: url(images/mobile/image-hero.jpg);
-    height: max-content;
-    width: 100vw;
-    background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
+    padding: calc(1vw + 3rem) 5vw;
+    position: relative;
+}
+header nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+header #logo {
+    height: calc(1em + 4vw);
+    max-height: 2.5rem;
+}
+header #ham {
+    height: calc(1em + 4vw);
+    max-height: 2.5rem;
+    padding: .4rem;
+}
+header ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 1.5rem;
+    height: 20rem;
+    width: 88vw;
+    max-width: 400px;
+    right: 6vw;
+    overflow: hidden;
+    list-style-type: none;
+    background-color: rgb(59, 57, 57);
+    align-items: center;
+    margin: 2rem 0;
+    padding: 2rem 0 2.2rem;
+    opacity: 1;
+    position: absolute;
+}
+header li a{
+    color: var(--white);
+    text-decoration: none;
+    border-bottom: solid 2px transparent;
+    padding: .3rem 0;
+}
+#hero-text {
+    background-color: #32185749;
+    border: solid 2px var(--white);
+    padding: 1.5rem 1.5rem;
+    margin-top: 22vh;
+    color: var(--white);
+    font-size: calc(1rem + .5vw);
+    line-height: calc(2.5rem + .8vw);
+    font-family: var(--lighter-font);
+    font-weight: 100;
+    max-width: max-content;
+    min-width: 20rem;
+    overflow: hidden;
 }
 
-.title-heading{
-    color: white;
-    width: 74vw;
-    border: 3px solid;
-    margin-top: 150px;
-    
+/* ********* ABOUT SECTION ********* */
+#about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 6rem 0;
 }
-.nav-heading{
-    font-size: 220%;
-    margin: 30px 40px 30px 25px;
-    font-weight: lighter;
-    font-family: 'Josefin Sans';
+#about img {
+    width: 88vw;
+    max-width: 40rem;
+    margin-bottom: 3rem;
 }
-
-
-/******** LEADERS SECTION *******/
-.leader{
+#about-text {
+    width: 80vw;
+    max-width: 30rem;
     text-align: center;
-    padding: 100px 0 80px;
-    max-width: 85%;
-    margin: auto;
 }
-
-.top-img{
-    max-width: 100%;
-    margin-bottom: 60px;
+#about-text h1{
+    font-family: var(--lighter-font);
+    font-size: 2rem;
+    font-weight: 100;
+    line-height: 2rem;
 }
-
-.lead-heading{
-    font-weight: lighter;
-    font-size: 2.5rem;
-    line-height: 1;
-}
-.lead-paragraph{
-    width: 70%;
-    font-family: 'Alata';
-    color: hsl(0, 0%, 41%);
-    margin: auto;
-    line-height: 2;
+#about-text p {
+    line-height: 1.7rem;
+    margin-top: 1.2rem;
+    color: var(--very-dark-grey);
     font-weight: 500;
-    padding: 20px 0;
 }
 
 
-/******** CREATION SECTION *******/
+/* ********* CREATIONS SECTION ********* */
 #creations {
     display: flex;
     flex-direction: column;
@@ -98,15 +138,15 @@ body {
 }
 #creations h1 {
     font-size:  1.8rem;
-    font-family: sans-serif;
-    font-weight: lighter;
+    font-family: var(--lighter-font);
+    font-weight: 100;
     margin-bottom: 0;
 }
 #creations button {
     width: 50vw;
     max-width: 200px;
     height: 3rem;
-    background-color: white;
+    background-color: var(--white);
     border: solid 3px rgba(0, 0, 0, 0.349);
     border-radius: 0;
     font-size: 1.2rem;
@@ -117,19 +157,23 @@ body {
     animation-fill-mode: forwards;
 }
 #creations .items > div {
-    width: 80vw;
+    width: 90vw;
+    height: 7rem;
     background-size: cover;
     background-position: center;
-    margin: 3rem 0;
-    font-family: sans-serif;
+    margin: 2rem 0;
+    font-family: var(--lighter-font);
 }
 #creations .items div.cover {
     border: solid 1px wheat;
+    height: 7rem;
     font-size: 20px;
-    color: white;
+    color: var(--white);
     letter-spacing: 2px;
     background-color: rgba(0, 0, 0, 0.322);
-    padding: 3rem 10rem 2rem 1.5rem;
+    display: flex;
+    align-items: flex-end;
+    padding: 1rem 5vw;
 }
 #creations .items div.cover:hover {
     animation: cover .2s ease-in-out;
@@ -164,8 +208,8 @@ body {
 
 footer {
     width: 100vw;
-    background-color: black;
-    color: white;
+    background-color: var(--black);
+    color: var(--white);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -199,19 +243,19 @@ footer li {
 footer a {
     width: max-content;
     margin-top: 1rem;
-    color: white;
+    color: var(--white);
     border-bottom: solid 3px transparent;
     padding-bottom: .5rem;
     text-decoration: none;
-    font-family: 'Alata', sans-serif;
+    font-family: var(--bolder-font);
 }
 footer a:hover {
-    color: white;
+    color: var(--white);
 }
 #footer-icons {
     display: flex;
     justify-content: space-between;
-    width: min-content;
+    width: 190px;
     margin: 2rem;
 }
 #footer-icons div {
@@ -220,68 +264,98 @@ footer a:hover {
     align-items: center;
 }
 #footer-icons .icons {
-    height: 20px;
+    height: 25px;
+}
+#footer-icons div {
+    border-bottom: solid 2px transparent;
+    padding: .5rem 0;
 }
 footer p {
-    color: rgb(138, 133, 133);
+    color: var(--dark-grey);
 }
-@media (min-width: 1000px){
-    .container-fluid{
-        width: 100vw;
-        padding: 50px 150px 100px;
-    }
-    .title{
-    background-image: url(images/desktop/image-hero.jpg);
-    height: max-content;
+
+@media (min-width: 1300px){
+    header {
+        background-image: url(images/desktop/image-hero.jpg);
     }
     
-    .title-heading{
-        color: white;
-        width: 30vw;
-        border: 3px solid;
-        margin-top: 150px;
-        
+    header #ham {
+        display: none;
     }
-    .nav-heading{
-        font-size: 300%;
-        margin: 20px 0px 20px 25px;
-        font-weight: lighter;
-        font-family: 'Josefin Sans';
-    }
-    .leader{
-        text-align: left;
-        padding: 100px 0 80px;
-        max-width: 85%;
-        margin: auto;
-    }
-    .top-img{
-        max-width: 100%;
-        margin-bottom: 100px;
-        position: relative;
-        right: 250px;
-    }
-    .leader-text{
+    header ul {
+        background-color: transparent;
+        display: flex;
         position: absolute;
-        background-color: white;
-        left: 690px;
-        top: 840px;
-        padding: 50px 80px 0;
+        top: calc(1vw - .6rem);
+        flex-direction: row;
+        width: 45vw;
+        height: min-content;
+        max-width: unset;
     }
-    .lead-heading{
-        font-weight: lighter;
-        font-size: 3rem;
-        line-height: 1;
-        width: 60%;
-    }
-    .lead-paragraph{
-        width: 65%;
-        font-family: 'Alata';
-        color: hsl(0, 0%, 41%);
-        line-height: 1.8;
+    header a {
+        opacity: .9;
         font-weight: 500;
-        padding: 10px 0 0;
-        margin: 0;
     }
+
+    #hero-text {
+        background-color: transparent;
+        border: solid 2px var(--white);
+        padding: 2rem 3rem;
+        margin-top: 20vh;
+        color: var(--white);
+        font-size: calc(1rem + 1vw);
+        line-height: calc(2.2rem + 2vw);
+        font-family: var(--lighter-font);
+        font-weight: 100;
+        max-width: 42vw ;
+        overflow: hidden;
+    }
+
+
+
+
+
+    #about {
+        flex-direction: row;
+        justify-content: center;
+        height: 45vw;
+        position: relative;
+        overflow: hidden;
+        margin: 5rem 0;
+        padding: 5vw;
+    }
+    #about img{
+        align-self: flex-start;
+        width: 50vw;
+        max-width: unset;
+        position: absolute;
+        left: 5vw;
+        top: 5vw;
+    }
+    #about-text {
+        background-color: var(--white);
+        width: 45vw;
+        max-width: unset;
+        height: unset;
+        padding:5vw 6vw 0px;
+        align-self: flex-end;
+        position: absolute;
+        left: 47vw;
+        bottom: 5vw;
+        z-index: 2;
+        text-align: left;
+    }
+    #about-text h1 {
+        font-size: 3rem;
+        line-height: 3rem;
+        font-family: var(--lighter-font);
+    }
+    #about-text p {
+        font-family: var(--bolder-font);
+        font-weight: 400;
+        font-size: var(--default-font-size);
+    }
+
     #creations .items {
         width: 80vw;
         display: grid;
@@ -294,13 +368,14 @@ footer p {
         height: 35vw;
         margin: 0;
         background-size: cover;
-        margin: 3rem 0;
-        font-family: sans-serif;
+        margin: 1rem 0;
+        font-family: var(--lighter-font);
+        font-weight: 100;
     }
     #creations .items div.cover {
-        border: solid 1px wheat;
+        border: solid 1px var(--white);
         font-size: calc(1rem + .7vw);
-        color: white;
+        color: var(--white);
         height: 100%;
         background-color: rgba(0, 0, 0, 0.322);
         padding: 25vw 0 2rem 2rem ;
@@ -312,7 +387,7 @@ footer p {
         margin-bottom: 2rem;
     }
     #creations-head h1 {
-        font-size: 2.5rem;
+        font-size: 2.1rem;
     }
     #creations-head button {
         display: inline-block;
@@ -362,7 +437,10 @@ footer p {
         display: flex;
         justify-content: space-between;
         margin: 0 0 2rem 0;
-        width: 250px;
+        width: 200px;
+    }
+    #footer-icons .icons {
+        height: 25px;
     }
     #footer-right{
         display: flex;
@@ -379,20 +457,20 @@ footer p {
 @keyframes cover {
     from {
         background-color: rgba(0, 0, 0, 0.322);
-        color: white;
+        color: var(--white);
     }   
     to {
-        background-color: rgba(255, 255, 255, 0.658);
-        color: black;
+        background-color: rgba(255, 255, 255, 0.671);
+        color: var(--black);
     }
 }
 @keyframes button {
     from {
-        background-color: white;
-        color: black;
+        background-color: var(--white);
+        color: var(--black);
     }
     to {
-        background-color: black;
-        color: white;
+        background-color: var(--black);
+        color: var(--white);
     }
 }
