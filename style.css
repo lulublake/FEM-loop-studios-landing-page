@@ -33,7 +33,7 @@ header {
     background-image: url(images/mobile/image-hero.jpg);
     background-size: cover;
     background-position: center;
-    padding: calc(1vw + 3rem) 5vw;
+    padding: calc(1vw + 2.5rem) 10vw;
     position: relative;
 }
 header nav {
@@ -44,7 +44,7 @@ header nav {
 }
 header #logo {
     height: calc(1em + 4vw);
-    max-height: 2.5rem;
+    max-height: 2.4rem;
 }
 header #ham {
     height: calc(1em + 4vw);
@@ -286,11 +286,13 @@ footer p {
         background-color: transparent;
         display: flex;
         position: absolute;
-        top: calc(1vw - .6rem);
+        top: calc(1vw - 1.2rem);
         flex-direction: row;
-        width: 45vw;
+        width: 37vw;
         height: min-content;
         max-width: unset;
+        right: 10vw;
+        font-size: 1.3rem;
     }
     header a {
         opacity: .9;
@@ -303,11 +305,11 @@ footer p {
         padding: 2rem 3rem;
         margin-top: 20vh;
         color: var(--white);
-        font-size: calc(1rem + 1vw);
-        line-height: calc(2.2rem + 2vw);
+        font-size: calc(1rem + .6vw);
+        line-height: calc(2.2rem + 1.7vw);
         font-family: var(--lighter-font);
         font-weight: 100;
-        max-width: 42vw ;
+        max-width: 35vw ;
         overflow: hidden;
     }
 
@@ -318,26 +320,26 @@ footer p {
     #about {
         flex-direction: row;
         justify-content: center;
-        height: 45vw;
+        height: 37vw;
         position: relative;
         overflow: hidden;
-        margin: 5rem 0;
-        padding: 5vw;
+        margin: 10rem 0 5rem;
+        padding: 0 10vw;
     }
     #about img{
         align-self: flex-start;
-        width: 50vw;
+        width: 40vw;
         max-width: unset;
         position: absolute;
-        left: 5vw;
-        top: 5vw;
+        left: 10vw;
+        top: 0vw;
     }
     #about-text {
         background-color: var(--white);
-        width: 45vw;
+        width: 40vw;
         max-width: unset;
         height: unset;
-        padding:5vw 6vw 0px;
+        padding:5vw 0px 0px 6vw;
         align-self: flex-end;
         position: absolute;
         left: 47vw;
@@ -346,8 +348,8 @@ footer p {
         text-align: left;
     }
     #about-text h1 {
-        font-size: 3rem;
-        line-height: 3rem;
+        font-size: 2.4rem;
+        line-height: 2.8rem;
         font-family: var(--lighter-font);
     }
     #about-text p {
